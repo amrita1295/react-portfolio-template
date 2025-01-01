@@ -6,11 +6,11 @@
 
 This simple portfolio template is designed to showcase your past projects, career history, skill sets, and more.
 
-View the [Demo](https://yujisatojr.github.io/react-portfolio-template/).
+View the [Demo](https://github.com/user-attachments/assets/e1041806-6be7-423b-8dd3-7a5a2f51790f).
 
 **This template is free to use, and no attribution is required.** You can fork or download this repository to customize it for your own use. Please don't forget to leave a ⭐ if you like this portfolio!
 
-![screenshot](./src/assets//images/screenshot.png)
+![screenshot](https://github.com/user-attachments/assets/e1041806-6be7-423b-8dd3-7a5a2f51790f)
 
 ## Features
 
