@@ -56,7 +56,7 @@ function Project() {
             <div className="project">
                 <a href="https://www.rishi.fit/" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%" height="50%"/></a>
                 <a href="https://www.rishi.fit/" target="_blank" rel="noreferrer"><h2>Client's Project</h2></a>
-                <p>Developed a Portfolio Website for a client using React, featuring a modern, responsive design to showcase their work and professional details. Implemented smooth navigation, dynamic content rendering, and optimized performance to ensure a seamless user experience across devices.</p>
+                <p>Developed a portfolio Website for a client using React, featuring a modern, responsive design to showcase their work and professional details. Implemented smooth navigation, dynamic content rendering, and optimized performance to ensure a seamless user experience across devices.</p>
             </div>
         </div>
     </div>
