@@ -140,13 +140,13 @@ function Project() {
             review:
                 "Delivered high-quality results under tight deadlines — professional, efficient, and detail-oriented."
         },
-        {
-            name: "Rishikesh Kumar",
-            role: "Startup Founder",
-            img: rishi,
-            review:
-                "Creative, fast, and detail-oriented! Every project milestone was met with quality and innovation.",
-        },
+        // {
+        //     name: "Rishikesh Kumar",
+        //     role: "Startup Founder",
+        //     img: rishi,
+        //     review:
+        //         "Creative, fast, and detail-oriented! Every project milestone was met with quality and innovation.",
+        // },
         {
             name: "Azam Qureshi",
             role: "Client",
@@ -159,14 +159,14 @@ function Project() {
             role: "Startup Founder",
             img: deshank,
             review:
-                "Delivered a large-scale educational platform within just a few months, impressive dedication.The project was completed on time, beautifully designed, and functional."
+                "Developed a comprehensive employee management platform for JC Staff, enabling seamless attendance tracking, task updates, and manager approvals.",
         },
         {
             name: "Avneet Kaur",
             role: "Startup Founder",
             img: person,
             review:
-                "Delivered a large-scale educational platform within just a few months, impressive dedication.The project was completed on time, beautifully designed, and functional."
+                "Built a powerful digital presence for Vajra Fitness, featuring dynamic workouts, smooth navigation, and mobile-optimized interaction."
         }
 
     ];
