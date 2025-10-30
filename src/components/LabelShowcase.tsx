@@ -44,9 +44,9 @@ function LabelShowcase() {
 
   return (
     <div className="label-showcase" id="label">
-      <h2 className="label-title">Label Design Showcase</h2>
+      <h2 className="label-title">Graphic Design Showcase</h2>
       <p className="label-subtitle">
-        A glimpse into my product label and packaging design work — crafted for clarity, identity, and visual appeal.
+        A glimpse into my creative, customised designs, and product labels — crafted for clarity, identity, and visual appeal.
       </p>
 
       <div className="label-grid">
