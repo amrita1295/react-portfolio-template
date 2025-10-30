@@ -170,3 +170,69 @@
     }
   }
 }
+/* 📱 Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .label-showcase {
+    padding: 3rem 1rem;
+
+    .label-title {
+      font-size: 1.6rem;
+    }
+
+    .label-subtitle {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .label-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .label-card {
+      max-width: 90%;
+      height: auto; // allow the image to define height
+      animation: none; // remove float animation for smoother scrolling
+      box-shadow: 0 0 18px rgba(120, 120, 255, 0.25);
+
+      &:hover {
+        transform: none; // disable hover lift effect on mobile
+      }
+
+      .label-inner img {
+        border-radius: 15px;
+        height: auto;
+      }
+
+      .label-overlay {
+        opacity: 1; // keep it slightly visible for readability
+        background: rgba(10, 10, 40, 0.6);
+        h3 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.8rem;
+          line-height: 1.3;
+        }
+      }
+    }
+
+    .label-popup .popup-content {
+      max-width: 90vw;
+      max-height: 70vh;
+
+      .popup-overlay {
+        padding: 1rem;
+        h3 {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
