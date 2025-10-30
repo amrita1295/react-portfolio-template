@@ -235,4 +235,18 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .review-grid, 
+  .review-container {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    gap: 1.5rem; /* spacing between cards */
+  }
+
+  .review-card {
+    width: 90%; /* make cards full-width on mobile */
+    max-width: 400px;
+  }
+}
 
