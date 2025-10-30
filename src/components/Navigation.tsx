@@ -84,12 +84,17 @@ function Navigation() {
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            edge="start"
+            edge="end"
             onClick={handleDrawerToggle}
-            sx={{ display: { sm: 'none' } }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              position: 'absolute',
+              right: '1rem',
+            }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ fontSize: '1.8rem' }} />
           </IconButton>
+
 
           <Box sx={{
             display: { xs: 'none', sm: 'flex' },
@@ -135,23 +140,73 @@ function Navigation() {
 
       <nav>
         <Drawer
+          anchor="right"
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
+          transitionDuration={400}
           ModalProps={{ keepMounted: true }}
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              backgroundColor: '#12122b',
-              color: '#fff'
+              backgroundColor: '#1b1b3a',
+              color: '#fff',
+              borderLeft: '2px solid #2e2e5a',
+              boxShadow: '-4px 0 15px rgba(0,0,0,0.6)',
+              transition: 'transform 0.4s ease-in-out',
             },
           }}
         >
-          {drawer}
+          <Box sx={{ textAlign: 'center', paddingY: 2 }}>
+            <p
+              style={{
+                fontSize: '1.2rem',
+                fontWeight: 600,
+                marginBottom: '1rem',
+                color: '#bdbdff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+              }}
+            >
+              <ListIcon /> Menu
+            </p>
+            <Divider sx={{ backgroundColor: '#555' }} />
+            <List>
+              {navItems.map((item) => (
+                <ListItem key={item[0]} disablePadding>
+                  <ListItemButton
+                    sx={{
+                      textAlign: 'center',
+                      paddingY: 1.2,
+                      '&:hover': {
+                        backgroundColor: '#2a2a55',
+                      },
+                    }}
+                    onClick={() => {
+                      scrollToSection(item[1]);
+                      setMobileOpen(false);
+                    }}
+                  >
+                    <ListItemText
+                      primary={item[0]}
+                      primaryTypographyProps={{
+                        fontSize: '1rem',
+                        fontWeight: 500,
+                        color: '#fff',
+                      }}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
         </Drawer>
       </nav>
+
     </Box>
   );
 }
