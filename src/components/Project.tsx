@@ -219,12 +219,12 @@ function Project() {
                     autoplay={true}
                     autoplaySpeed={4000}
                     speed={600}
-                    slidesToShow={3}
+                    slidesToShow={2}
                     slidesToScroll={1}
                     pauseOnHover={true}
                     responsive={[
                         {
-                            breakpoint: 1024, // tablets
+                            breakpoint: 1024, // tablet
                             settings: {
                                 slidesToShow: 2,
                             },
@@ -234,11 +234,21 @@ function Project() {
                             settings: {
                                 slidesToShow: 1,
                                 centerMode: true,
-                                centerPadding: "20px",
+                                centerPadding: "0px",
                             },
                         },
                     ]}
-                />
+                >
+                    {reviews.map((r, i) => (
+                        <div key={i} className="review-card fade-in">
+                            <img src={r.img} alt={r.name} className="review-avatar" />
+                            <h3>{r.name}</h3>
+                            <p className="review-role">{r.role}</p>
+                            <p className="review-text">“{r.review}”</p>
+                        </div>
+                    ))}
+                </Slider>
+
 
             </div>
 
