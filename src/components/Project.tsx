@@ -125,13 +125,7 @@ function Project() {
             review:
                 "Outstanding work! The website turned out sleek, responsive, and delivered ahead of schedule. Communication was seamless throughout.",
         },
-        {
-            name: "Rishikesh Kumar",
-            role: "Startup Founder",
-            img: rishi,
-            review:
-                "Creative, fast, and detail-oriented! Every project milestone was met with quality and innovation.",
-        },
+
         {
             name: "Shashank Reddy",
             role: "Client",
@@ -145,6 +139,13 @@ function Project() {
             img: madhu,
             review:
                 "Delivered high-quality results under tight deadlines — professional, efficient, and detail-oriented."
+        },
+        {
+            name: "Rishikesh Kumar",
+            role: "Startup Founder",
+            img: rishi,
+            review:
+                "Creative, fast, and detail-oriented! Every project milestone was met with quality and innovation.",
         },
         {
             name: "Azam Qureshi",
