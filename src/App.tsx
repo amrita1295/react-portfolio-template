@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {
   Main,
-  Timeline,
   Expertise,
   Project,
+  LabelShowcase,
   Contact,
   Navigation,
   Footer,
@@ -28,12 +28,13 @@ function App() {
 
     return (
     <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-        <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
+        <Navigation />
         <FadeIn transitionDuration={700}>
             <Main/>
             <Expertise/>
-            <Timeline/>
+             <LabelShowcase/>
             <Project/>
+           
             <Contact/>
         </FadeIn>
         <Footer />

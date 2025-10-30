@@ -1,65 +1,249 @@
 import React from "react";
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.jpeg';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
-import '../assets/styles/Project.scss';
+import mock03 from "../assets/images/mock03.png";
+import mock07 from "../assets/images/mock07.png";
+import mock08 from "../assets/images/mock08.png";
+import mock09 from "../assets/images/mock09.png";
+import rishi from "../assets/images/rishi.jpg"
+import reddy from "../assets/images/reddy.jpg"
+import madhu from "../assets/images/madhu.jpg"
+import person from "../assets/images/person.jpg"
+import xtra from "../assets/images/xtraliving.jpg"
+import face from "../assets/images/facetimer.jpg"
+import ermin from "../assets/images/ermin.jpg"
+import jc from "../assets/images/jc.jpg"
+import imad from "../assets/images/college.jpg"
+import salon from "../assets/images/Salon.jpeg"
+import laundry from "../assets/images/laundry.jpeg"
+import vajra from "../assets/images/Vajra.jpg"
+import deshank from "../assets/images/deshank.jpg"
+import marketing from "../assets/images/marketing.jpeg"
+import "../assets/styles/Project.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Project() {
-    return(
-    <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
-        <div className="projects-grid">
-            <div className="project">
-                <a href="https://github.com/amrita1295/Instagram-Post-sharing-application" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%" height="50%" /></a>
-                <a href="https://github.com/amrita1295/Instagram-Post-sharing-application" target="_blank" rel="noreferrer"><h2>Post Sharing Application</h2></a>
-                <p>Developed an Instagram clone with features like photo sharing, user authentication, and real-time messaging using the MERN stack (MongoDB, Express.js, React, Node.js).</p>
+    const projects = [
+        {
+            title: "Fitness Web Application",
+            type: "Client",
+            img: mock03,
+            link: "https://www.rishi.fit/",
+            github: "#",
+            desc: "A modern fitness brand website focused on clarity, strength, and motion — crafted with bold design and smooth, responsive interactions.",
+        },
+        {
+            title: "Fitness Web Application",
+            type: "Client",
+            img: xtra,
+            link: "https://xtraliving.org/",
+            github: "#",
+            desc: "An advanced fitness and lifestyle platform featuring user login, personalized dashboards, and a seamless shopping experience for premium sports products.",
+        },
+        {
+            title: "Face Timer",
+            type: "Startup",
+            img: face,
+            link: "https://app.jcstaff.nl/",
+            github: "#",
+            desc: "A smart employee management system enabling staff to log work hours, track productivity, and seamlessly request manager approvals",
+        },
+        {
+            title: "Ermin Automotive",
+            type: "Startup",
+            img: ermin,
+            link: "https://erminautomotive.com/",
+            github: "#",
+            desc: "Built for Ermin Automotive: a sleek digital platform to showcase their electric mobility innovation, combining immersive design, modern UI and smooth mobile optimization.",
+        },
+        {
+            title: "JC Staff (Neitherlands)",
+            type: "Startup",
+            img: jc,
+            link: "https://jcstaff.nl/",
+            github: "#",
+            desc: "A modern corporate website for JC Staff, showcasing their staffing solutions with clear service sections, team profiles and mobile-optimized performance.",
+        },
+        {
+            title: "College Website (Client from Saudi Arabia)",
+            type: "Startup",
+            img: imad,
+            link: "https://imadinstitute.in/index.html",
+            github: "#",
+            desc: "A fully responsive educational website with an integrated student dashboard, allowing learners to access courses, track progress, and manage their study materials seamlessly.",
+        },
+        {
+            title: "Vajra Fitness",
+            type: "Startup",
+            img: vajra,
+            link: "https://vajrafitness.com/",
+            github: "#",
+            desc: "A dynamic fitness application offering personalized workout plans, membership management, and real-time tracking for a complete health experience.",
+        },
+        {
+            title: "Salon App",
+            type: "Client",
+            img: salon,
+            link: "#",
+            github: "#",
+            desc: "A sleek salon booking application with customer profiles, appointment scheduling, and stylist management for seamless service operations.",
+        },
+        {
+            title: "Laundry App",
+            type: "Client",
+            img: laundry,
+            link: "#",
+            github: "#",
+            desc: "A user-friendly laundry service app enabling pickup scheduling, order tracking, and payment integration with a clean and intuitive interface.",
+        },
+        {
+            title: "BookStore",
+            type: "Client",
+            img: mock09,
+            link: "https://book-store-amrita1295.vercel.app/",
+            github: "#",
+            desc: "An elegant online bookstore platform with user-friendly navigation, secure checkout, and personalized book recommendations for a seamless reading and shopping experience.",
+        },
+        {
+            title: "Sadhana Tribe (Marketing)",
+            type: "Client",
+            img: marketing,
+            link: "https://www.instagram.com/sadhana_tribe",
+            github: "#",
+            desc: "Successfully managed digital marketing for Sadhana Tribe, achieving over 5,000 organic Instagram followers within 1.5 months through strategic content and branding.",
+        },
+
+
+
+    ];
+
+    const reviews = [
+        {
+            name: "Rishikesh Kumar",
+            role: "Startup Founder",
+            img: rishi,
+            review:
+                "Outstanding work! The website turned out sleek, responsive, and delivered ahead of schedule. Communication was seamless throughout.",
+        },
+        {
+            name: "Rishikesh Kumar",
+            role: "Startup Founder",
+            img: rishi,
+            review:
+                "Creative, fast, and detail-oriented! Every project milestone was met with quality and innovation.",
+        },
+        {
+            name: "Shashank Reddy",
+            role: "Client",
+            img: reddy,
+            review:
+                "Loved the experience! The UI animations and transitions were top-notch — exactly what I wanted for my brand.",
+        },
+        {
+            name: "Madhu Samala",
+            role: "Startup Founder",
+            img: madhu,
+            review:
+                "Delivered high-quality results under tight deadlines — professional, efficient, and detail-oriented."
+        },
+        {
+            name: "Azam Qureshi",
+            role: "Client",
+            img: person,
+            review:
+                "Delivered a large-scale educational platform within just a few months, impressive dedication.The project was completed on time, beautifully designed, and functional."
+        },
+        {
+            name: "Deshank Dengre",
+            role: "Startup Founder",
+            img: deshank,
+            review:
+                "Delivered a large-scale educational platform within just a few months, impressive dedication.The project was completed on time, beautifully designed, and functional."
+        },
+        {
+            name: "Avneet Kaur",
+            role: "Startup Founder",
+            img: person,
+            review:
+                "Delivered a large-scale educational platform within just a few months, impressive dedication.The project was completed on time, beautifully designed, and functional."
+        }
+
+    ];
+
+    return (
+        <section className="projects-container" id="projects">
+            <h1 className="section-title">Projects & Collaborations</h1>
+            <p className="section-subtitle">
+                A selection of my most creative and impactful works — blending code,
+                design, and experience.
+            </p>
+
+            {/* PROJECT CARDS */}
+
+            <div className="projects-grid">
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className={`project-card fade-up ${project.type === "Client" ? "client" : ""}`}
+                    >
+                        <div
+                            className={`ribbon ${project.type === "Client" ? "client-ribbon" : ""}`}
+                        >
+                            {project.type}
+                        </div>
+
+                        <a href={project.link} target="_blank" rel="noreferrer">
+                            <div className="project-image-wrapper">
+                                <img src={project.img} alt={project.title} />
+                            </div>
+                        </a>
+
+                        <div className="project-info">
+                            <a href={project.github} target="_blank" rel="noreferrer">
+                                <h2>{project.title}</h2>
+                            </a>
+                            <p>{project.desc}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="project">
-                <a href="https://book-store-amrita1295.vercel.app/" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%" height="50%"/></a>
-                <a href="https://github.com/amrita1295/BookStore" target="_blank" rel="noreferrer"><h2>BookStore</h2></a>
-                <p>
-                Developed a Bookstore application using React, featuring a user-friendly interface for browsing, searching, and managing books. Integrated APIs to dynamically fetch and display book details.
-                Enhanced user experience with responsive design and state management using React hooks and context.</p>
+
+            {/* REVIEWS SECTION */}
+
+            <div className="reviews-section" id="review">
+                <h2 className="reviews-title">Client Reviews</h2>
+
+                <Slider
+                    dots={true}
+                    infinite={true}
+                    autoplay={true}
+                    autoplaySpeed={4000}
+                    speed={600}
+                    slidesToShow={2}
+                    slidesToScroll={1}
+                    pauseOnHover={true}
+                    responsive={[
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1,
+                            },
+                        },
+                    ]}
+                >
+                    {reviews.map((r, i) => (
+                        <div key={i} className="review-card fade-in">
+                            <img src={r.img} alt={r.name} className="review-avatar" />
+                            <h3>{r.name}</h3>
+                            <p className="review-role">{r.role}</p>
+                            <p className="review-text">“{r.review}”</p>
+                        </div>
+                    ))}
+                </Slider>
             </div>
-            <div className="project">
-                <a href="https://to-do-app-five-steel.vercel.app/" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%" height="50%"/></a>
-                <a href="https://github.com/amrita1295/To-do-App" target="_blank" rel="noreferrer"><h2>Todo Application</h2></a>
-                <p>Developed a To-Do Application using React, featuring a clean and intuitive interface for adding, editing, deleting, and marking tasks as complete. Implemented state management with React hooks and a responsive design for a smooth user experience.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/amrita1295/Meme_generator" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="102%" height="50%"/></a>
-                <a href="https://github.com/amrita1295/Meme_generator" target="_blank" rel="noreferrer"><h2>Meme Generator</h2></a>
-                <p>Developed a Meme Generator application using React, enabling users to create custom memes by adding text to images. Integrated dynamic state management with React hooks for real-time updates and ensured a responsive design for an engaging user experience.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/amrita1295/Drowsiness_system_opencv" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%" height="50%"/></a>
-                <a href="https://github.com/amrita1295/Drowsiness_system_opencv" target="_blank" rel="noreferrer"><h2>Drowsiness detection with OpenCV</h2></a>
-                <p>Developed a Drowsiness Detection System using OpenCV and Haar Cascades, designed to monitor facial landmarks and detect signs of fatigue or drowsiness in real-time. Implemented eye aspect ratio (EAR) analysis for accurate detection, enhancing safety and usability.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/amrita1295/Code-Editor" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%" height="50%"/></a>
-                <a href="https://github.com/amrita1295/Code-Editor" target="_blank" rel="noreferrer"><h2>Code-Editor</h2></a>
-                <p>Developed a Code Editor application using React, featuring syntax highlighting, real-time code editing, and language support. 
-                Integrated libraries like CodeMirror/Monaco Editor for an enhanced developer experience and implemented responsive design for seamless usage across devices.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/amrita1295/HoteL_Management" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%" height="50%"/></a>
-                <a href="https://github.com/amrita1295/HoteL_Management" target="_blank" rel="noreferrer"><h2>Hotel Management System</h2></a>
-                <p>
-                Developed a Hotel Management System using Python, featuring functionalities like room booking, guest check-in/check-out, billing, and room availability tracking. </p>
-            </div>
-            <div className="project">
-                <a href="https://www.rishi.fit/" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%" height="50%"/></a>
-                <a href="https://www.rishi.fit/" target="_blank" rel="noreferrer"><h2>Client's Project</h2></a>
-                <p>Developed a portfolio Website for a client using React, featuring a modern, responsive design to showcase their work and professional details. Implemented smooth navigation, dynamic content rendering, and optimized performance to ensure a seamless user experience across devices.</p>
-            </div>
-        </div>
-    </div>
+
+
+        </section>
     );
 }
 
