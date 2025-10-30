@@ -12,7 +12,7 @@ function LabelShowcase() {
   const labels = [
     {
       img: dates,
-      title: "Desert Gold — Premium Dates Packaging",
+      title: "Gold — Premium Dates Packaging",
       desc: "Crafted a premium, earthy label design emphasizing purity and natural energy, with polished rich organic tones.",
     },
     {
