@@ -1,7 +1,5 @@
 import React from "react";
 import mock03 from "../assets/images/mock03.png";
-import mock07 from "../assets/images/mock07.png";
-import mock08 from "../assets/images/mock08.png";
 import mock09 from "../assets/images/mock09.png";
 import rishi from "../assets/images/rishi.jpg"
 import reddy from "../assets/images/reddy.jpg"
