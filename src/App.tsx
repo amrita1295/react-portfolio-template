@@ -4,6 +4,7 @@ import {
   Expertise,
   Project,
   LabelShowcase,
+  BrandIdentity,
   Contact,
   Navigation,
   Footer,
@@ -28,13 +29,13 @@ function App() {
 
     return (
     <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-        <Navigation />
+        <Navigation mode={mode} onModeChange={handleModeChange} />
         <FadeIn transitionDuration={700}>
             <Main/>
             <Expertise/>
-             <LabelShowcase/>
+            <LabelShowcase/>
+            <BrandIdentity/>
             <Project/>
-           
             <Contact/>
         </FadeIn>
         <Footer />

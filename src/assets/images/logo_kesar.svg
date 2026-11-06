@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="900" height="900" viewBox="0 0 900 900">
+<defs>
+<radialGradient cx="450" cy="450" r="350" gradientUnits="userSpaceOnUse" id="d0">
+<stop offset="0" stop-color="#3A1030" stop-opacity="0.9" />
+<stop offset="1" stop-color="#120610" stop-opacity="0" />
+</radialGradient>
+</defs>
+<rect x="0" y="0" width="900" height="900" fill="#120610" />
+<rect x="0" y="0" width="900" height="900" fill="url(#d0)" />
+<path d="M574.6318640331779,171.59734492150113 L742.4026550784988,339.36813596682214 L742.4026550784988,576.6318640331779 L574.6318640331779,744.4026550784988 L337.3681359668222,744.4026550784988 L169.59734492150113,576.6318640331779 L169.59734492150108,339.3681359668222 L337.36813596682225,171.59734492150108 Z" fill="#000000" fill-opacity="0.5" />
+<path d="M568.6318640331779,163.59734492150113 L736.4026550784988,331.36813596682214 L736.4026550784988,568.6318640331779 L568.6318640331779,736.4026550784988 L331.3681359668222,736.4026550784988 L163.59734492150113,568.6318640331779 L163.59734492150108,331.3681359668222 L331.36813596682225,163.59734492150108 Z" fill="#2A0A22" />
+<path d="M568.6318640331779,163.59734492150113 L736.4026550784988,331.36813596682214 L736.4026550784988,568.6318640331779 L568.6318640331779,736.4026550784988 L331.3681359668222,736.4026550784988 L163.59734492150113,568.6318640331779 L163.59734492150108,331.3681359668222 L331.36813596682225,163.59734492150108 Z" fill="none" stroke="#C9952A" stroke-width="2.5" stroke-opacity="0.8" />
+<path d="M561.7435622506063,180.22717650670427 L719.7728234932957,338.2564377493938 L719.7728234932957,561.7435622506063 L561.7435622506063,719.7728234932957 L338.2564377493938,719.7728234932957 L180.22717650670427,561.7435622506063 L180.22717650670427,338.2564377493938 L338.25643774939385,180.22717650670427 Z" fill="none" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.3" />
+<circle cx="568.6318640331779" cy="163.59734492150113" r="4" fill="#C9952A" fill-opacity="0.6" />
+<circle cx="736.4026550784988" cy="331.36813596682214" r="4" fill="#C9952A" fill-opacity="0.6" />
+<circle cx="736.4026550784988" cy="568.6318640331779" r="4" fill="#C9952A" fill-opacity="0.6" />
+<circle cx="568.6318640331779" cy="736.4026550784988" r="4" fill="#C9952A" fill-opacity="0.6" />
+<circle cx="331.3681359668222" cy="736.4026550784988" r="4" fill="#C9952A" fill-opacity="0.6" />
+<circle cx="163.59734492150113" cy="568.6318640331779" r="4" fill="#C9952A" fill-opacity="0.6" />
+<circle cx="163.59734492150108" cy="331.3681359668222" r="4" fill="#C9952A" fill-opacity="0.6" />
+<circle cx="331.36813596682225" cy="163.59734492150108" r="4" fill="#C9952A" fill-opacity="0.6" />
+<path d="M450,450 C502.0,450.0,470.0,302.0,450.0,302.0 C430.0,302.0,398.0,450.0,450,450 Z" fill="#8B2252" fill-opacity="0.93" />
+<path d="M450,450 L450.0,319.76" stroke="#D06090" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round" />
+<path d="M450,450 C476.0,495.0333209967908,588.171759760097,393.32050807568874,578.171759760097,376.0 C568.171759760097,358.67949192431126,424.0,404.9666790032092,450,450 Z" fill="#8B2252" fill-opacity="0.93" />
+<path d="M450,450 L562.7911485888853,384.88" stroke="#D06090" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round" />
+<path d="M450,450 C424.0,495.0333209967908,568.171759760097,541.3205080756887,578.171759760097,524.0 C588.171759760097,506.67949192431126,476.0,404.9666790032092,450,450 Z" fill="#8B2252" fill-opacity="0.93" />
+<path d="M450,450 L562.7911485888853,515.12" stroke="#D06090" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round" />
+<path d="M450,450 C418.47667530224646,431.8,383.8756443470179,536.5307436087194,396.0,543.5307436087194 C408.1243556529821,550.5307436087194,481.52332469775354,468.2,450,450 Z" fill="#B03070" fill-opacity="0.93" />
+<path d="M450,450 L402.48,532.307054375673" stroke="#D06090" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round" />
+<path d="M450,450 C450.0,413.6,342.0,436.0,342.0,450.0 C342.0,464.0,450.0,486.4,450,450 Z" fill="#B03070" fill-opacity="0.93" />
+<path d="M450,450 L354.96,450.0" stroke="#D06090" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round" />
+<path d="M450,450 C481.52332469775354,431.8,408.1243556529821,349.4692563912806,395.99999999999994,356.4692563912806 C383.8756443470178,363.4692563912806,418.47667530224646,468.2,450,450 Z" fill="#B03070" fill-opacity="0.93" />
+<path d="M450,450 L402.47999999999996,367.69294562432697" stroke="#D06090" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round" />
+<path d="M450,450 C427.6,370,435.59999999999997,310,440.4,272" fill="none" stroke="#E04808" stroke-width="2.5" stroke-linecap="round" />
+<ellipse cx="440.4" cy="272" rx="7" ry="14" fill="#E04808" fill-opacity="0.9" />
+<ellipse cx="440.4" cy="268" rx="5" ry="9" fill="#FF8820" />
+<ellipse cx="440.4" cy="265" rx="3" ry="5" fill="#FFD040" />
+<path d="M450,450 C450.0,370,450.0,310,450.0,272" fill="none" stroke="#E04808" stroke-width="2.5" stroke-linecap="round" />
+<ellipse cx="450.0" cy="272" rx="7" ry="14" fill="#E04808" fill-opacity="0.9" />
+<ellipse cx="450.0" cy="268" rx="5" ry="9" fill="#FF8820" />
+<ellipse cx="450.0" cy="265" rx="3" ry="5" fill="#FFD040" />
+<path d="M450,450 C472.4,370,464.40000000000003,310,459.6,272" fill="none" stroke="#E04808" stroke-width="2.5" stroke-linecap="round" />
+<ellipse cx="459.6" cy="272" rx="7" ry="14" fill="#E04808" fill-opacity="0.9" />
+<ellipse cx="459.6" cy="268" rx="5" ry="9" fill="#FF8820" />
+<ellipse cx="459.6" cy="265" rx="3" ry="5" fill="#FFD040" />
+<circle cx="450" cy="450" r="22" fill="#C9952A" />
+<circle cx="450" cy="450" r="14" fill="#E8C060" />
+<circle cx="450" cy="450" r="7" fill="#FFF0A0" />
+<path d="M170,690 L380,690" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.4" />
+<path d="M520,690 L730,690" stroke="#C9952A" stroke-width="0.8" stroke-opacity="0.4" />
+<circle cx="450" cy="690" r="3" fill="#C9952A" fill-opacity="0.5" />
+<text x="450" y="745" font-size="88" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-style="italic" font-weight="bold" fill="#C9952A" letter-spacing="8">KESAR</text>
+<text x="450" y="808" font-size="17" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" fill="#7A5818" letter-spacing="4">KASHMIR  ·  SAFFRON  &amp;  EXOTIC  SPICES</text>
+</svg>

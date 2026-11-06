@@ -1,22 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.1rem !important;
+  font-size: 1rem;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
-  font-size: 1rem !important;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.95rem;
 }
 
 .main-container {
   position: relative;
-  background-color: #0d1116;
+  background-color: #0a0d14;
+  overflow-x: hidden;
+}
 
+/* Section alternation */
+.section-alt {
+  background-color: #0d1120;
 }
 
 a {
@@ -25,7 +34,7 @@ a {
 
 a:hover {
   color: #5000ca;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
 p, a, h1, h2, h3, h4, h5, label, button {
@@ -33,12 +42,13 @@ p, a, h1, h2, h3, h4, h5, label, button {
   font-family: "Lato", sans-serif;
 }
 
+/* ── Navigation ── */
 .navigation-bar {
   justify-content: space-between;
-  background-color: #0d1116;
+  background-color: transparent;
 
   button {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: "Lato", sans-serif;
     text-transform: initial;
     padding: 6px 10px;
@@ -56,6 +66,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 }
 
+/* ── Layout ── */
 .container {
   margin-top: 64px;
   width: 100%;
@@ -92,11 +103,52 @@ p, a, h1, h2, h3, h4, h5, label, button {
   justify-content: center;
 }
 
+/* ── Chips ── */
+.chip {
+  color: rgb(39, 40, 34) !important;
+  background-color: white !important;
+  font-size: 0.8rem !important;
+  height: 25px !important;
+
+  span {
+    font-family: 'Courier Prime', monospace;
+    color: rgb(39, 40, 34);
+  }
+
+  svg {
+    height: 15px !important;
+  }
+}
+
+.flex-chips {
+  line-height: 2;
+  margin: 0.5;
+
+  .chip-title {
+    color: white;
+    padding-right: 10px;
+  }
+}
+
+.flex-chips .MuiChip-root {
+  margin-right: 0.5em;
+}
+
+.flex-chips .MuiChip-outlined {
+  background-color: #e0e0e0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.flex-chips .MuiChip-outlined span {
+  color: rgb(39, 40, 34);
+}
+
+/* ── Light Mode ── */
 .light-mode {
   background-color: #f8f9fa;
 
   .navigation-bar {
-    background-color: #f8f9fa;
+    background-color: rgba(248, 249, 250, 0.95);
   }
 
   p, a, h1, h2, h3, h4, h5, label, button {
@@ -105,7 +157,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
   a:hover {
     color: #5000ca;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   }
 
   .navigation-bar svg {
@@ -122,7 +174,11 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
   .chip {
     background-color: rgba(0, 0, 0, 0.08);
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  }
+
+  .flex-chips .chip-title {
+    color: #0d1116;
   }
 
   .vertical-timeline::before {
@@ -130,7 +186,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
   }
 
   .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
@@ -141,15 +197,13 @@ p, a, h1, h2, h3, h4, h5, label, button {
     border-right: 7px solid rgba(0, 0, 0, 0.08) !important;
   }
 
-  .flex-chips .chip-title {
-    color: #0d1116;
+  .section-alt {
+    background-color: #eef2f7;
   }
 }
 
-@media screen {
-  @media (max-width: 768px) {
-    .items-container {
-      padding: 5% 5%;
-    }
+@media screen and (max-width: 768px) {
+  .items-container {
+    padding: 5% 5%;
   }
 }

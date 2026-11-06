@@ -1,43 +1,64 @@
 .label-showcase {
+  padding: 6rem 8%;
   text-align: center;
-  padding: 5rem 2rem;
   color: #fff;
 
-  .label-title {
-    font-size: 2rem;
+  .label-eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
     font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 100px;
+    padding: 4px 16px;
+    margin-bottom: 1rem;
+  }
+
+  .label-title {
+    font-size: 2.4rem;
+    font-weight: 900;
     margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .label-subtitle {
-    color: #9ca3af;
-    margin-bottom: 2.5rem;
+    color: #64748b;
+    margin-bottom: 3rem;
     font-size: 1rem;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .label-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     justify-items: center;
   }
 
   .label-card {
     width: 100%;
-    max-width: 350px;
-    height: 220px; // ✅ consistent card height
+    height: 260px;
     perspective: 1000px;
     cursor: pointer;
     animation: float 6s ease-in-out infinite;
     animation-delay: calc(var(--i) * 0.3s);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 0 25px rgba(120, 120, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
 
     &:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 0 35px rgba(130, 130, 255, 0.6);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(56, 189, 248, 0.2);
+      border-color: rgba(56, 189, 248, 0.2);
     }
 
     .label-inner {
@@ -48,37 +69,52 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover; // ✅ makes sure it fills the card completely
+        object-fit: cover;
         object-position: center;
-        border-radius: 20px;
-        filter: brightness(0.95);
-        transition: filter 0.4s ease;
+        display: block;
+        transition: transform 0.5s ease, filter 0.4s ease;
+      }
+
+      /* Permanent subtle gradient at bottom for readability */
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(10, 13, 20, 0.6) 0%, transparent 50%);
+        pointer-events: none;
       }
 
       .label-overlay {
         position: absolute;
         inset: 0;
-        background: rgba(20, 20, 60, 0.85);
+        background: rgba(10, 15, 40, 0.88);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 1.25rem;
         opacity: 0;
-        transition: opacity 0.4s ease;
-        border-radius: 20px;
+        transition: opacity 0.35s ease;
+        z-index: 2;
 
         h3 {
-          color: #a3b9ff;
-          font-size: 1.2rem;
+          color: #38bdf8;
+          font-size: 1rem;
+          font-weight: 700;
           margin-bottom: 0.5rem;
+          line-height: 1.3;
         }
 
         p {
-          color: #d1d5db;
-          font-size: 0.9rem;
-          width: 80%;
-          line-height: 1.4;
+          color: #cbd5e1;
+          font-size: 0.83rem;
+          line-height: 1.5;
+          text-align: center;
         }
+      }
+
+      &:hover img {
+        transform: scale(1.06);
       }
 
       &:hover .label-overlay {
@@ -87,166 +123,178 @@
     }
 
     &.active {
-      transform: scale(1.05);
+      transform: scale(1.03);
       z-index: 10;
     }
   }
 
-  /* Floating Animation */
   @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
   }
 
-  /* Popup styling */
+  /* ── Popup ── */
   .label-popup {
     position: fixed;
     inset: 0;
-    background: rgba(10, 10, 25, 0.9);
+    background: rgba(5, 8, 20, 0.92);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2000;
     animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(6px);
 
-  .popup-content {
-  position: relative;
-  max-width: 60vw;   // ⬅ smaller width
-  max-height: 65vh;  // ⬅ smaller height
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 0 40px rgba(120, 120, 255, 0.5);
-  animation: popupFloat 1.2s ease-in-out infinite alternate;
-
-
+    .popup-content {
+      position: relative;
+      max-width: 56vw;
+      max-height: 65vh;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(56, 189, 248, 0.25);
+      animation: popupFloat 1.4s ease-in-out infinite alternate;
+      border: 1px solid rgba(56, 189, 248, 0.15);
 
       img {
         width: 100%;
         height: 100%;
-        object-fit: contain; // ✅ keeps full image visible
+        object-fit: contain;
         display: block;
       }
 
       .popup-overlay {
         position: absolute;
         bottom: 0;
-        background: rgba(0, 0, 40, 0.8);
+        background: linear-gradient(to top, rgba(5, 8, 20, 0.95) 0%, rgba(5, 8, 20, 0.7) 100%);
         padding: 1.5rem;
         width: 100%;
-        color: #d1d5db;
+        box-sizing: border-box;
 
         h3 {
-          color: #a3b9ff;
-          font-size: 1.5rem;
+          color: #38bdf8;
+          font-size: 1.3rem;
+          margin-bottom: 0.4rem;
         }
 
         p {
-          margin-top: 0.5rem;
-          font-size: 1rem;
+          margin: 0;
+          font-size: 0.95rem;
+          color: #cbd5e1;
+          line-height: 1.5;
         }
       }
     }
   }
 
   @keyframes popupFloat {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-5px);
-    }
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-6px); }
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
 }
-/* 📱 Responsive Design for Mobile */
-@media (max-width: 768px) {
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .label-showcase .label-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
   .label-showcase {
-    padding: 3rem 1rem;
+    padding: 4rem 5%;
 
-    .label-title {
-      font-size: 1.6rem;
-    }
-
-    .label-subtitle {
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
+    .label-title  { font-size: 1.9rem; }
+    .label-subtitle { font-size: 0.9rem; }
 
     .label-grid {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
     }
 
     .label-card {
-      max-width: 90%;
-      height: auto; // allow the image to define height
-      animation: none; // remove float animation for smoother scrolling
-      box-shadow: 0 0 18px rgba(120, 120, 255, 0.25);
+      height: auto;
+      min-height: 220px;
+      animation: none;
 
-      &:hover {
-        transform: none; // disable hover lift effect on mobile
-      }
+      &:hover { transform: none; }
 
-      .label-inner img {
-        border-radius: 15px;
-        height: auto;
-      }
+      .label-inner img { height: 220px; }
 
       .label-overlay {
-        opacity: 1; // keep it slightly visible for readability
-        background: rgba(10, 10, 40, 0.6);
-        h3 {
-          font-size: 1rem;
-        }
-        p {
-          font-size: 0.8rem;
-          line-height: 1.3;
-        }
+        opacity: 1;
+        background: rgba(5, 8, 20, 0.7);
       }
     }
 
     .label-popup .popup-content {
-      max-width: 90vw;
-      max-height: 70vh;
+      max-width: 92vw;
+      max-height: 72vh;
 
       .popup-overlay {
         padding: 1rem;
-        h3 {
-          font-size: 1.1rem;
-        }
-        p {
-          font-size: 0.9rem;
-        }
+        h3 { font-size: 1.1rem; }
+        p  { font-size: 0.88rem; }
       }
     }
   }
 }
+
+/* Mobile review card fixes */
 @media (max-width: 768px) {
-  .review-grid, 
+  .review-grid,
   .review-container {
     display: flex;
-    flex-direction: column; /* stack vertically */
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem; /* spacing between cards */
+    gap: 1.5rem;
   }
 
   .review-card {
-    width: 90%; /* make cards full-width on mobile */
+    width: 90%;
     max-width: 400px;
   }
 }
 
+/* ── Light mode ── */
+.light-mode .label-showcase {
+  color: #0d1116;
+
+  .label-eyebrow {
+    color: #1d4ed8;
+    border-color: rgba(29, 78, 216, 0.3);
+  }
+
+  .label-title {
+    background: linear-gradient(135deg, #0d1116 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .label-subtitle { color: #475569; }
+
+  .label-card {
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      box-shadow: 0 20px 50px rgba(29, 78, 216, 0.15);
+      border-color: rgba(29, 78, 216, 0.2);
+    }
+
+    .label-inner::after {
+      background: linear-gradient(to top, rgba(240, 245, 255, 0.4) 0%, transparent 50%);
+    }
+
+    .label-overlay {
+      background: rgba(230, 238, 255, 0.92);
+      h3 { color: #1d4ed8; }
+      p  { color: #334155; }
+    }
+  }
+}

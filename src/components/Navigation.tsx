@@ -13,17 +13,25 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const drawerWidth = 240;
 const navItems = [
   ['Expertise', 'expertise'],
   ['Labels', 'label'],
+  ['Branding', 'branding'],
   ['Projects', 'projects'],
   ['Reviews', 'review'],
   ['Contact', 'contact']
 ];
 
-function Navigation() {
+interface NavigationProps {
+  mode: string;
+  onModeChange: () => void;
+}
+
+function Navigation({ mode, onModeChange }: NavigationProps) {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
@@ -70,9 +78,11 @@ function Navigation() {
         id="navigation"
         className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}
         sx={{
-          backgroundColor: scrolled ? 'rgba(15,15,40,0.9)' : 'transparent',
+          backgroundColor: scrolled
+            ? (mode === 'light' ? 'rgba(248,249,250,0.95)' : 'rgba(15,15,40,0.9)')
+            : 'transparent',
           transition: 'background-color 0.4s ease, box-shadow 0.4s ease',
-          boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.3)' : 'none',
+          boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.15)' : 'none',
         }}
       >
         <Toolbar className='navigation-bar' sx={{
@@ -81,6 +91,23 @@ function Navigation() {
           gap: '2rem',
           transition: 'all 0.4s ease'
         }}>
+          {/* Mobile: theme toggle on left, menu on right */}
+          <IconButton
+            onClick={onModeChange}
+            aria-label="toggle theme"
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              position: 'absolute',
+              left: '1rem',
+              color: mode === 'light' ? '#0d1116' : '#fff',
+            }}
+          >
+            {mode === 'light'
+              ? <DarkModeIcon sx={{ fontSize: '1.3rem' }} />
+              : <LightModeIcon sx={{ fontSize: '1.3rem' }} />
+            }
+          </IconButton>
+
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -90,6 +117,7 @@ function Navigation() {
               display: { xs: 'block', sm: 'none' },
               position: 'absolute',
               right: '1rem',
+              color: mode === 'light' ? '#0d1116' : '#fff',
             }}
           >
             <MenuIcon sx={{ fontSize: '1.8rem' }} />
@@ -108,7 +136,7 @@ function Navigation() {
                 key={index}
                 onClick={() => scrollToSection(item[1])}
                 sx={{
-                  color: '#fff',
+                  color: mode === 'light' ? '#0d1116' : '#fff',
                   fontSize: '1rem',
                   fontWeight: 500,
                   textTransform: 'none',
@@ -135,6 +163,32 @@ function Navigation() {
               </Button>
             ))}
           </Box>
+
+          {/* Theme toggle */}
+          <IconButton
+            onClick={onModeChange}
+            aria-label="toggle theme"
+            sx={{
+              color: mode === 'light' ? '#0d1116' : '#fff',
+              ml: 1,
+              border: '1px solid',
+              borderColor: mode === 'light' ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.15)',
+              borderRadius: '50%',
+              width: 36,
+              height: 36,
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                borderColor: mode === 'light' ? '#1d4ed8' : '#C9952A',
+                backgroundColor: mode === 'light' ? 'rgba(29,78,216,0.08)' : 'rgba(201,149,42,0.1)',
+                transform: 'rotate(20deg)',
+              },
+            }}
+          >
+            {mode === 'light'
+              ? <DarkModeIcon sx={{ fontSize: '1.1rem' }} />
+              : <LightModeIcon sx={{ fontSize: '1.1rem' }} />
+            }
+          </IconButton>
         </Toolbar>
       </AppBar>
 

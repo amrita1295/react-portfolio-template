@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1000" height="700" viewBox="0 0 1000 700">
+<defs>
+</defs>
+<rect x="0" y="0" width="1000" height="700" fill="#111111" />
+<path d="M600.0,0 L1000,0 L1000,350.0 L600.0,0 Z" fill="#F5C800" fill-opacity="0.08" />
+<rect x="60" y="130" width="400" height="72" fill="#C81400" />
+<rect x="60" y="130" width="400" height="8" fill="#F5C800" />
+<path d="M132,202 C128,302,135,462,180,560 C225,462,232,302,228,202 Z" fill="#C81400" />
+<path d="M160,222 C154,302,160,402,170,442 C176,422,176,302,170,222 Z" fill="#FF5530" fill-opacity="0.45" />
+<ellipse cx="180" cy="568" rx="14" ry="22" fill="#8A0E00" />
+<path d="M180,202 L190,150" stroke="#3A8010" stroke-width="10" stroke-linecap="round" />
+<path d="M190,150 C235,110,250,145,220,165 C204,172,192,166,190,150 Z" fill="#4AA018" />
+<text x="350" y="460" font-size="310" text-anchor="middle" dominant-baseline="middle" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="#C81400" letter-spacing="-4">EJA</text>
+<text x="350" y="460" font-size="310" text-anchor="middle" dominant-baseline="middle" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="none" stroke="#F5C800" stroke-width="2" stroke-opacity="0.15" letter-spacing="-4">EJA</text>
+<path d="M700,100 L700,600" stroke="#333" stroke-width="1" />
+<text x="840" y="210" font-size="56" text-anchor="middle" dominant-baseline="middle" font-family="Impact, sans-serif" fill="#F5C800" letter-spacing="4">ASLI</text>
+<text x="840" y="280" font-size="56" text-anchor="middle" dominant-baseline="middle" font-family="Impact, sans-serif" fill="#F5C800" letter-spacing="4">LAAL</text>
+<text x="840" y="345" font-size="42" text-anchor="middle" dominant-baseline="middle" font-family="Impact, sans-serif" fill="#AA1000" letter-spacing="4">MIRCH</text>
+<path d="M730,380 L950,380" stroke="#333" stroke-width="1" />
+<text x="840" y="410" font-size="18" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" fill="#666" letter-spacing="4">EXTRA HOT</text>
+<text x="840" y="450" font-size="18" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" fill="#666" letter-spacing="3">100% PURE SPICE</text>
+<text x="840" y="500" font-size="16" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" fill="#444" letter-spacing="3">FSSAI APPROVED</text>
+<rect x="0" y="605" width="1000" height="95" fill="#F5C800" />
+<text x="500" y="652" font-size="22" text-anchor="middle" dominant-baseline="middle" font-family="Impact, sans-serif" fill="#111111" letter-spacing="4">TEJA  SPICES  ·  SINCE  1981  ·  INDIA</text>
+</svg>
